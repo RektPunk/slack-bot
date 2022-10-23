@@ -1,13 +1,13 @@
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
-from module.credential import Tokens
-
+from variables.credential import Tokens
+from variables.channel import ChannelId
 
 app = App(token=Tokens.SLACK_BOT_TOKEN)
 
 
 @app.event("app_mention")
-def who_am_i(event, client, message, say):
+def greetings(event, client, message, say):
     print("event:", event)
     print("client:", client)
     print("message:", message)
