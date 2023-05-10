@@ -14,13 +14,13 @@ jobs:
         with:
           payload: |
             {
-              "text": "PR Created \n$<{{ github.event.pull_request.html_url }}|Link>",
+              "text": "PR Created \n<${{ github.event.pull_request.html_url }}|Link>",
               "blocks": [
                 {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "PR Created \n$<{{ github.event.pull_request.html_url }}|Link>"
+                    "text": "PR Created \n<${{ github.event.pull_request.html_url }}|Link>"
                   }
                 }
               ]
