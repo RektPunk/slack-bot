@@ -14,13 +14,13 @@ jobs:
         with:
           payload: |
             {
-              "text": "PR Created \n Link: <${{ github.event.pull_request.html_url }}|Link> \n branch: `${{ github.ref_name }}`",
+              "text": "새로운 PR이 생성되었습니다 :fire: \n Link: <${{ github.event.pull_request.html_url }}|Link> \n branch: `${{ github.ref_name }}`",
               "blocks": [
                 {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "PR Created \n Link: <${{ github.event.pull_request.html_url }}|Link> \n branch: `${{ github.ref_name }}`"
+                    "text": "새로운 PR이 생성되었습니다 :fire: \n Link: <${{ github.event.pull_request.html_url }}|Link> \n branch: `${{ github.ref_name }}`"
                   }
                 }
               ]
