@@ -14,7 +14,7 @@ def send_message_slack(text: str) -> None:
             }
         ]
     }
-    requests.post(WebhookUrl.SLACK_WEBHOOK_URL.value, json=payload)
+    requests.post(WebhookUrl.SLACK_WEBHOOK_URL, json=payload)
 
 
 if __name__ == "__main__":

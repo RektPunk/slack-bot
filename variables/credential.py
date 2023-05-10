@@ -18,3 +18,6 @@ class Tokens(str, Enum):
 
 class WebhookUrl(str, Enum):
     SLACK_WEBHOOK_URL: str = os.environ["SLACK_WEBHOOK_URL"]
+
+    def __repr__(self):
+        return f"{self.value}"
