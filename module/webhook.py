@@ -1,8 +1,8 @@
 import requests
+from variables.credential import WebhookUrl
 
 
 def send_message_slack(text: str) -> None:
-    webhook_url = "https://hooks.slack.com/services/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"
     payload = {
         "blocks": [
             {
@@ -14,7 +14,7 @@ def send_message_slack(text: str) -> None:
             }
         ]
     }
-    requests.post(webhook_url, json=payload)
+    requests.post(WebhookUrl.SLACK_WEBHOOK_URL, json=payload)
 
 
 if __name__ == "__main__":
